@@ -26,13 +26,21 @@ class MainActivity : AppCompatActivity() {
         tentativas = 0
         jogo++
 
-        atualizaJogoTentativas()
+        atualizaJogo()
+        atualizaTentativas()
     }
 
-    private fun atualizaJogoTentativas() {
-        findViewById<TextView>(R.id.textViewTentativas).text = getString(R.string.Tentativa) + tentativas
+    private fun atualizaJogo() {
         findViewById<TextView>(R.id.textViewJogo).text = getString(R.string.Jogo) + jogo
     }
+
+    private fun atualizaTentativas() {
+        findViewById<TextView>(R.id.textViewTentativas).text = getString(R.string.Tentativa) + tentativas
+
+    }
+
+
+
 
 
     fun adivinhar(view: View) {
@@ -63,6 +71,9 @@ class MainActivity : AppCompatActivity() {
         }else{
                    getString(R.string.numero_Menor)
         }
+
+        tentativas++
+        atualizaTentativas()
 
     }
 }
