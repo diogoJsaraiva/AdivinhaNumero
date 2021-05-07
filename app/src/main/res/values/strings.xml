@@ -10,7 +10,10 @@
     <string name="que_numero_estou_a_pensar_1_a_10">Que numero estou a pensar (1 a 10)?</string>
     <string name="jogo_1">Jogo: 1</string>
     <string name="Jogo">\"Jogo: \"</string>
-    <string name="Tentativa">\"Tentativas: \"</string>
+    <string name="Tentativa">\Tentativas: \</string>
     <string name="numero_invalido">Introduza um número (entre 1 e 10)</string>
     <string name="numero_entre_1_10">O número deve estar entre 1 e 10</string>
+    <string name="Acerto">Parabéns, Acertou !!!</string>
+    <string name="numero_Maior">O número que estou a pensar é maior</string>
+    <string name="numero_Menor">o número que estou a pensar é menos</string>
 </resources>

@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val numero = editTextNumero.text.toString().toIntOrNull()
 
         when (numero){
-            in 1..10 -> verificaAcertou()
+            in 1..10 -> verificaAcertou(numero!!)
             null -> editTextNumero.error =getString(R.string.numero_invalido)
             else -> editTextNumero.error =getString(R.string.numero_entre_1_10)
 
@@ -53,7 +53,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun verificaAcertou() {
+    private fun verificaAcertou(numero: Int) {
+        val textViewFeedback = findViewById<TextView>(R.id.textViewFeedback)
+        textViewFeedback.text =
+         if(numero == numeroAdivinhar){
+                    getString(R.string.Acerto)
+        }else if(numeroAdivinhar > numero){
+                    getString(R.string.numero_Maior)
+        }else{
+                   getString(R.string.numero_Menor)
+        }
 
     }
 }
