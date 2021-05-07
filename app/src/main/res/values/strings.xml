@@ -5,4 +5,8 @@
     <string name="_0">0</string>
     <string name="numero">Numero</string>
     <string name="que_numero_estou_a_pensar">Que Numero estou a pensar?</string>
+    <string name="par_bens_acertou">Parábens acertou</string>
+    <string name="tentativas_0">Tentativas: 0</string>
+    <string name="que_numero_estou_a_pensar_1_a_10">Que numero estou a pensar (1 a 10)?</string>
+    <string name="jogo_1">Jogo: 1</string>
 </resources>

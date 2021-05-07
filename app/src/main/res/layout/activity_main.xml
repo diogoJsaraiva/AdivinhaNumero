@@ -7,37 +7,38 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonAdivinhar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="30dp"
         android:text="@string/adivinhar"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewFeedback"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/tentativas"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/par_bens_acertou"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdivinhar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdivinhar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdivinhar" />
 
     <TextView
         android:id="@+id/textViewTentativas"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/_0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/tentativas_0"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFeedback"
+        app:layout_constraintStart_toStartOf="@+id/textViewFeedback"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFeedback" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -54,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputNumero"
+            android:id="@+id/editTextNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -69,11 +70,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:gravity="center"
-        android:text="@string/que_numero_estou_a_pensar"
+        android:text="@string/que_numero_estou_a_pensar_1_a_10"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewJogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/jogo_1"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTentativas"
+        app:layout_constraintStart_toStartOf="@+id/textViewTentativas"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTentativas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
