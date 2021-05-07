@@ -63,17 +63,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun verificaAcertou(numero: Int) {
         val textViewFeedback = findViewById<TextView>(R.id.textViewFeedback)
-        textViewFeedback.text =
+
+        val mensagem : String
+
+
          if(numero == numeroAdivinhar){
-                    getString(R.string.Acerto)
+             textViewFeedback.text = getString(R.string.Acerto)
+             perguntarSeQuerJogarNovamente()
         }else if(numeroAdivinhar > numero){
-                    getString(R.string.numero_Maior)
+             textViewFeedback.text =getString(R.string.numero_Maior)
         }else{
-                   getString(R.string.numero_Menor)
+             textViewFeedback.text =getString(R.string.numero_Menor)
         }
 
         tentativas++
         atualizaTentativas()
 
+    }
+
+    private fun perguntarSeQuerJogarNovamente() {
+        // colocar um alerta se quer jogar novamente
     }
 }
