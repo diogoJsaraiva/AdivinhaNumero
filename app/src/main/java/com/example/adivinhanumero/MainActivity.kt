@@ -3,6 +3,7 @@ package com.example.adivinhanumero
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import java.util.*
 
@@ -29,10 +30,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun atualizaJogoTentativas() {
-        findViewById<TextView>(R.id.textViewTentativas).text = "Tentativas: " + tentativas
-        findViewById<TextView>(R.id.textViewJogo).text = "Jogo: " + jogo
+        findViewById<TextView>(R.id.textViewTentativas).text = getString(R.string.Tentativa) + tentativas
+        findViewById<TextView>(R.id.textViewJogo).text = getString(R.string.Jogo) + jogo
     }
 
 
-    fun adivinhar(view: View) {}
+    fun adivinhar(view: View) {
+        val editTextNumero = findViewById<EditText>(R.id.editTextNumero)
+        val numero = editTextNumero.text.toString().toIntOrNull()
+
+        when (numero){
+            in 1..10 -> verificaAcertou()
+            null -> editTextNumero.error =getString(R.string.numero_invalido)
+            else -> editTextNumero.error =getString(R.string.numero_entre_1_10)
+
+
+        }
+
+
+
+
+
+    }
+
+    private fun verificaAcertou() {
+
+    }
 }
