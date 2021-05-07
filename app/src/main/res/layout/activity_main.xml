@@ -10,7 +10,8 @@
         android:id="@+id/buttonAdivinhar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
+        android:onClick="adivinhar"
         android:text="@string/adivinhar"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
@@ -20,14 +21,14 @@
         android:id="@+id/textViewFeedback"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="@string/par_bens_acertou"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/buttonAdivinhar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonAdivinhar"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdivinhar" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdivinhar"
+        tools:text="@string/par_bens_acertou" />
 
     <TextView
         android:id="@+id/textViewTentativas"
@@ -35,10 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/tentativas_0"
         app:layout_constraintEnd_toEndOf="@+id/textViewFeedback"
         app:layout_constraintStart_toStartOf="@+id/textViewFeedback"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFeedback" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewFeedback"
+        tools:text="@string/tentativas_0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -68,12 +69,12 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="52dp"
         android:gravity="center"
         android:text="@string/que_numero_estou_a_pensar_1_a_10"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,9 +84,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/jogo_1"
         app:layout_constraintEnd_toEndOf="@+id/textViewTentativas"
         app:layout_constraintStart_toStartOf="@+id/textViewTentativas"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTentativas" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTentativas"
+        tools:text="@string/jogo_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
