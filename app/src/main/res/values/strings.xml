@@ -16,4 +16,6 @@
     <string name="Acerto">Parabéns, Acertou !!!</string>
     <string name="numero_Maior">O número que estou a pensar é maior</string>
     <string name="numero_Menor">o número que estou a pensar é menos</string>
+    <string name="jogar_novamente">Quer jogar novamente</string>
+    <string name="acertou">Parabéns,acertou</string>
 </resources>

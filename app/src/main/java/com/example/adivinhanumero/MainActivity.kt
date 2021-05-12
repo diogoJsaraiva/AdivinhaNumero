@@ -1,10 +1,12 @@
 package com.example.adivinhanumero
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         atualizaJogo()
         atualizaTentativas()
+        findViewById<TextView>(R.id.textViewFeedback).text=""
     }
 
     private fun atualizaJogo() {
@@ -82,6 +85,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun perguntarSeQuerJogarNovamente() {
-        // colocar um alerta se quer jogar novamente
+        val alertDialogBuilder = AlertDialog.Builder(this)
+
+        alertDialogBuilder.setMessage(getString(R.string.jogar_novamente))
+        alertDialogBuilder.setTitle(getString(R.string.acertou))
+        alertDialogBuilder.setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> novoJogo() })
+        alertDialogBuilder.setNegativeButton(android.R.string.cancel, DialogInterface.OnClickListener { dialog, which -> finish() })
+
+        alertDialogBuilder.show()
+
     }
 }
