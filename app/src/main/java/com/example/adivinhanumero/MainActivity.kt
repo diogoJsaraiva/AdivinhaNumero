@@ -19,9 +19,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        novoJogo()
+        if(savedInstanceState == null) {
+            novoJogo()
+
+        }else{
+            numeroAdivinhar = savedInstanceState.getInt(NUMERO_ADIVINHAR)
+            jogo = savedInstanceState.getInt(JOGO)
+            tentativas = savedInstanceState.getInt(TENTATIVAS)
+
+            atualizaJogo()
+            atualizaTentativas()
+
+        }
 
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(NUMERO_ADIVINHAR,numeroAdivinhar)
+        outState.putInt(JOGO,jogo)
+        outState.putInt(TENTATIVAS,tentativas)
+    }
+
+
+
 
     private fun novoJogo() {
         numeroAdivinhar = random.nextInt(10) + 1
@@ -95,4 +116,11 @@ class MainActivity : AppCompatActivity() {
         alertDialogBuilder.show()
 
     }
+    companion object{
+        const val  NUMERO_ADIVINHAR = "NUMERO_ADIVINHAR"
+        const val  JOGO = "JOGO"
+        const val  TENTATIVAS = "TENTATIVAS"
+    }
+
+
 }
